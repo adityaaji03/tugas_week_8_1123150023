@@ -23,6 +23,25 @@ class MyPages extends StatelessWidget {
             ),
             SizedBox(height: 16),
 
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+                side: BorderSide(color: Colors.red, width: 2),
+              ),
+              borderOnForeground: true, // false
+              margin: EdgeInsets.all(16.0),
+              elevation: 8,
+              color: Colors.green,
+              child: Padding(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  "border tidak menimpa konten",
+                  style: TextStyle(fontSize: 12.0),
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+
             Container(
               decoration: BoxDecoration(
                 color: Colors.yellow,
