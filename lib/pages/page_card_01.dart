@@ -13,7 +13,7 @@ class MyPages extends StatelessWidget {
           children: [
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-              
+              margin: EdgeInsets.all(16.0),
               elevation: 8,
               color: Colors.green,
               child: Padding(
