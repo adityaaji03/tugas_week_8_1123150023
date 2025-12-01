@@ -12,13 +12,32 @@ class MyPages extends StatelessWidget {
         child: Column(
           children: [
             Card(
+              elevation: 8,
               color: Colors.green,
               child: Padding(
                 padding: EdgeInsets.all(12),
-                child: Text("card with color", style: TextStyle(fontSize: 16)),
+                child: Text("card with color", style: TextStyle(fontSize: 12.0)),
               ),
             ),
             SizedBox(height: 16),
+
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.yellow,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    blurRadius: 10,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Text(
+                "Tinggi bayangan Shadow",
+                style: TextStyle(fontSize: 12.0),
+              ),
+            )
           ],
         ),
       ),
