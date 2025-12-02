@@ -85,6 +85,33 @@ class MyPages extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
+
+            Card(
+              shadowColor: Colors.red,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Shadow Color Card",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(2.0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Custom border Radius Card",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+             
           ],
 
           
