@@ -112,6 +112,40 @@ class MyPages extends StatelessWidget {
             ),
             SizedBox(height: 16),
              
+            Card(
+              elevation: 8,
+              child: Padding(
+                //padding
+                padding: const EdgeInsets.all(20.0),
+                // membuat Column untuk menempatkan text Title
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Tentang Saya',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    // --- Bagian yang dipisah oleh halaman ---
+                    const SizedBox(height: 12),
+                    const Text(
+                      'an enthusiast in information technology (Digital Sign, Blockchain, et'
+                      'c), with more than 20 years of experiences in the payment industry',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.blue,
+                        height: 1.5,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                    // ... (kemungkinan ada kelanjutan kode di sini)
+                  ],
+                ),
+              ),
+            ),
           ],
 
           
