@@ -12,13 +12,18 @@ class MyPages extends StatelessWidget {
         child: Column(
           children: [
             Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
               margin: EdgeInsets.all(16.0),
               elevation: 8,
               color: Colors.green,
               child: Padding(
                 padding: EdgeInsets.all(12),
-                child: Text("card with color", style: TextStyle(fontSize: 12.0)),
+                child: Text(
+                  "card with color",
+                  style: TextStyle(fontSize: 12.0),
+                ),
               ),
             ),
             SizedBox(height: 16),
@@ -58,7 +63,19 @@ class MyPages extends StatelessWidget {
                 "Tinggi bayangan Shadow",
                 style: TextStyle(fontSize: 12.0),
               ),
-            )
+            ),
+
+             Card(
+              clipBehavior: Clip.antiAlias,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text(
+                  "Anti alias clip Card",
+                  style: TextStyle(fontSize: 14),
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
           ],
         ),
       ),
