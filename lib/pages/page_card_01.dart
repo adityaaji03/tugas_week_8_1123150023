@@ -343,6 +343,14 @@ class MyPages extends StatelessWidget {
                         ],
                       ),
                         SizedBox(height: 30),
+                        Text(
+                        "4562 1122 4595 7852",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          letterSpacing: 3,
+                        ),
+                        ),
                       
                      ],
                   ),),
