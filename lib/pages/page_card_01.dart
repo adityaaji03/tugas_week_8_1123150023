@@ -65,7 +65,7 @@ class MyPages extends StatelessWidget {
               ),
             ),
 
-             Card(
+            Card(
               clipBehavior: Clip.antiAlias,
               child: Padding(
                 padding: EdgeInsets.all(8),
@@ -111,13 +111,13 @@ class MyPages extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-             
+
             Card(
               elevation: 8,
               child: Padding(
                 //padding
                 padding: const EdgeInsets.all(20.0),
-                // membuat Column untuk menempatkan text Title
+               
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -129,7 +129,6 @@ class MyPages extends StatelessWidget {
                       ),
                     ),
 
-                    // --- Bagian yang dipisah oleh halaman ---
                     const SizedBox(height: 12),
                     const Text(
                       'an enthusiast in information technology (Digital Sign, Blockchain, et'
@@ -141,14 +140,177 @@ class MyPages extends StatelessWidget {
                       ),
                       textAlign: TextAlign.justify,
                     ),
-                    // ... (kemungkinan ada kelanjutan kode di sini)
+                  
                   ],
                 ),
               ),
             ),
-          ],
+            SizedBox(height: 16),
+            Card(
+              elevation: 8,
+              shadowColor: Colors.red,
+              clipBehavior: Clip.antiAlias,
 
-          
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Colors.blue, Colors.red],
+                  ), // LinearGradient
+                ), // BoxDecoration
+
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.white, width: 4),
+                        // ...
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 51),
+
+                            blurRadius: 10,
+                            offset: Offset(0, 5),
+                          ),
+                        ],
+                       
+                      ), // BoxDecoration
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundImage: AssetImage("assets/images/kid.jpeg"),
+                      ), // CircleAvatar
+                    ), // Container (Avatar)
+                    // Jarak
+                    SizedBox(height: 10),
+
+                    // 2. Bagian Nama
+                    Text(
+                      "Aditya Aji Pramono",
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ), // TextStyle
+                    ), // Text
+                    // 3. Bagian Title ("Flutter Developer")
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 6,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(20),
+                      ), // BoxDecoration
+                      child: const Text(
+                        'Mobile Developer',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ), // TextStyle
+                      ), // Text
+                    ), // Container (Title)
+                    // Jarak
+                    SizedBox(height: 10),
+
+                    // 4. Bagian Statistik (Menggunakan ROW)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        // Kolom 1: Follower
+                        Column(
+                          children: [
+                            Text(
+                              "100",
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Follower",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withValues(alpha: 0.5),
+                              ),
+                            ),
+                          ],
+                        ), // Column 1
+                        // Garis Vertikal
+                        SizedBox(
+                          height: 40,
+                          child: VerticalDivider(
+                            thickness: 1,
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ), // SizedBox (Divider)
+                        // Kolom 2: Year/Experience (Menggantikan Text "Column 2" di Page 22)
+                        Column(
+                          children: [
+                            Text(
+                              "20 year",
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Experience",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withValues(alpha: 0.5),
+                              ),
+                            ),
+                          ],
+                        ), // Column 2
+                        // Garis Vertikal
+                        SizedBox(
+                          height: 40,
+                          child: VerticalDivider(
+                            thickness: 1,
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ), // SizedBox (Divider)
+                        // Kolom 3: Project (Menggantikan Text "Column 3" di Page 22)
+                        Column(
+                          children: [
+                            Text(
+                              "250",
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Project",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withValues(alpha: 0.5),
+                              ),
+                            ),
+                          ],
+                        ), // Column 3
+                      ],
+                    ), // Row (Statistik)
+                  ],
+                ), // Column
+              ), // Container
+            ), // Card // Card
+          ],
         ),
       ),
     );
