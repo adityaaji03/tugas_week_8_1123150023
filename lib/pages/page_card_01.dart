@@ -351,7 +351,29 @@ class MyPages extends StatelessWidget {
                           letterSpacing: 3,
                         ),
                         ),
-                      
+                          SizedBox(height: 20),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Aditya Aji pramono",
+                              style: TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFFEB001B),
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                      ),
+                       SizedBox(height: 20),
                      ],
                   ),),
               ),
