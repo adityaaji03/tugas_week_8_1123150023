@@ -310,6 +310,44 @@ class MyPages extends StatelessWidget {
                 ), // Column
               ), // Container
             ), // Card // Card
+            Card(
+              elevation: 8,
+              shadowColor: Colors.red,
+              clipBehavior: Clip.antiAlias,
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight, 
+                    colors: [Colors.indigo, Colors.indigoAccent],
+                  ),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(16) ,
+                  child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.credit_card,
+                            color: Colors.white70,
+                            size: 32,
+                          ),
+                          Icon(
+                            Icons.contactless,
+                            color: Colors.white54,
+                            size: 32,
+                          ),
+                        ],
+                      ),
+                        SizedBox(height: 30),
+                      
+                     ],
+                  ),),
+              ),
+            )
           ],
         ),
       ),
